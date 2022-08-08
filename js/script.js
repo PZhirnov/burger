@@ -65,7 +65,7 @@ class Hamburger {
     constructor(size_bun = 'bigBun', stuffing = 'cheese') {
         this.size_bun = ingredients_bd.catBun[size_bun];
         this.stuffing = ingredients_bd.catStaffing[stuffing];
-        this.topping = {}
+        this.topping = {};
 
     }
     // метод изменяет булочку
@@ -97,7 +97,7 @@ class Hamburger {
 
     // Получить размер булочки
     getSizeBun() {
-        return this.size_bun.name
+        return this.size_bun.name;
     }
 
     // Добавки хранятся в отдельном массиве, поэтому по ним суммируем отдельно 
@@ -106,7 +106,7 @@ class Hamburger {
         for (let item in this.topping) {
             toppPrice += this.topping[item].price;
         }
-        return toppPrice
+        return toppPrice;
     }
 
     calculateToppCalories() {
@@ -122,7 +122,7 @@ class Hamburger {
     calculatePrice() {
         let bunPrice = this.size_bun.price;
         let stuffPrice = this.stuffing.price;
-        return bunPrice + stuffPrice + this.calculateToppPrice()
+        return bunPrice + stuffPrice + this.calculateToppPrice();
     }
 
     // Расчет общей суммы калорий в заказе
